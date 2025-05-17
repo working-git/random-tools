@@ -126,11 +126,7 @@ def main():
     start_server()
 
     # Keep the main thread alive to handle server requests
-    try:
-        while True:
-            pass
-    except KeyboardInterrupt:
-        shutdown_server(None, None)
+    server_thread.join()
 
 if __name__ == "__main__":
     main()
